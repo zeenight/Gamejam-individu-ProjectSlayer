@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cvg8o7x33lrc7"]
+
+[node name="StaminaUi" type="CanvasLayer" unique_id=1216419166]
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=312488011]
+offset_left = -83.0
+offset_top = 4.0
+offset_right = 85.0
+offset_bottom = 31.0

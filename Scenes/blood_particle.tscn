@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cwfc56y3c1215"]
+
+[ext_resource type="Texture2D" uid="uid://ddlo6ij81dbdp" path="res://assets/blood.png" id="1_xm0wu"]
+
+[node name="BloodParticle" type="CPUParticles2D" unique_id=2119938831]
+z_index = 2
+texture_filter = 1
+emitting = false
+amount = 32
+texture = ExtResource("1_xm0wu")
+lifetime = 0.25
+one_shot = true
+explosiveness = 1.0
+randomness = 0.45
+spread = 26.69
+gravity = Vector2(0, 0)
+initial_velocity_min = 12.22
+initial_velocity_max = 370.79
+angular_velocity_min = 2.6
+angular_velocity_max = 10.85
+damping_min = 300.0
+damping_max = 300.0
+scale_amount_min = 0.25

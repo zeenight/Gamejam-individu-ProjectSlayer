@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cgjnro6inkd27"
+path="res://.godot/imported/Sonido Sound Effect.mp3-ef5e53da68460ee64f31cda098f68b4f.mp3str"
+
+[deps]
+
+source_file="res://audio/player/Sonido Sound Effect.mp3"
+dest_files=["res://.godot/imported/Sonido Sound Effect.mp3-ef5e53da68460ee64f31cda098f68b4f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

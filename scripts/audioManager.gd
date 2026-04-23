@@ -6,7 +6,8 @@ var sounds := {
 	"player_dash": preload("res://audio/player/Sonido Sound Effect.mp3"),
 	"player_take_damage": preload("res://audio/player/freesound_community-slash1-94367.mp3"),
 	"fatal_attack": preload("res://audio/player/bannythecoolio-impactful-damage-425132.mp3"),
-	"fireball": preload("res://audio/dragon-studio-loud-explosion-425457.mp3")
+	"fireball": preload("res://audio/dragon-studio-loud-explosion-425457.mp3"),
+	"angel_scream": preload("res://audio/angel-attack-08.mp3")
 }  
 
 # Pool of AudioStreamPlayer nodes for overlapping sounds

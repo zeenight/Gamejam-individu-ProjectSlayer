@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://tphmi7f33idg"]
+
+[ext_resource type="Script" uid="uid://cyh0x6mgyiveq" path="res://Scenes/menu.gd" id="1_1rerr"]
+[ext_resource type="Texture2D" uid="uid://cuyad37t3fltu" path="res://assets/covr.png" id="2_xhh6f"]
+
+[node name="MainMenu" type="Control" unique_id=162267692]
+layout_mode = 3
+anchor_bottom = 0.060000002
+offset_left = 488.0
+offset_top = 225.0
+offset_right = 488.0
+offset_bottom = 186.12
+script = ExtResource("1_1rerr")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1159004971]
+layout_mode = 1
+color = Color(0.20714554, 0.10397344, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1975040954]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 1158.0
+offset_bottom = 656.0
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=160892802]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 20
+
+[node name="PlayButton" type="Button" parent="VBoxContainer" unique_id=796758348]
+layout_mode = 2
+text = "PLAY"
+
+[node name="CreditsButton" type="Button" parent="VBoxContainer" unique_id=2008062817]
+layout_mode = 2
+text = "CREDITS
+"
+
+[node name="CreditsPanel" type="PanelContainer" parent="." unique_id=234008328]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CreditsPanel" unique_id=624657274]
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="CreditsPanel/VBoxContainer" unique_id=552364343]
+layout_mode = 2
+
+[node name="CreditsLabel" type="RichTextLabel" parent="CreditsPanel/VBoxContainer" unique_id=1115230608]
+layout_mode = 2
+
+[node name="Covr" type="Sprite2D" parent="." unique_id=15691547]
+z_index = -3
+texture_filter = 1
+position = Vector2(90.99997, 81.00001)
+scale = Vector2(1.1669999, 1.2679999)
+texture = ExtResource("2_xhh6f")
+
+[connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="CreditsPanel/VBoxContainer/BackButton" to="." method="_on_play_button_pressed"]

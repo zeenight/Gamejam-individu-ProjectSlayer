@@ -6,12 +6,14 @@
 [ext_resource type="Texture2D" uid="uid://cma31080vln1r" path="res://assets/enemies/boss1/attacking_left-Sheet.png" id="2_6o4u3"]
 [ext_resource type="PackedScene" uid="uid://cwfc56y3c1215" path="res://Scenes/blood_particle.tscn" id="2_835tf"]
 [ext_resource type="Texture2D" uid="uid://vc056jr4f7et" path="res://assets/enemies/boss1/boss_attack_downwards.png" id="2_len00"]
+[ext_resource type="PackedScene" uid="uid://bojwt0e3keyvd" path="res://Scenes/ability_entity/SpikeHazard.tscn" id="2_ytm5n"]
 [ext_resource type="Texture2D" uid="uid://c4j7s3nkx0p03" path="res://assets/enemies/boss1/attacking_right-Sheet.png" id="3_4r51v"]
 [ext_resource type="Texture2D" uid="uid://dxnykkn5ndp0x" path="res://assets/enemies/boss1/bosswalk_leftt-Sheet.png" id="3_ovx14"]
 [ext_resource type="Texture2D" uid="uid://bfybodgabeabt" path="res://assets/enemies/boss1/bosswalk_right-Sheet.png" id="4_6o4u3"]
 [ext_resource type="Texture2D" uid="uid://b08vylc55b5hm" path="res://assets/enemies/boss1/attack_up-Sheet.png" id="5_hyudx"]
 [ext_resource type="Texture2D" uid="uid://drw714kxpq33y" path="res://assets/enemies/boss1/boss_death-Sheet.png" id="7_hvxwm"]
 [ext_resource type="Texture2D" uid="uid://b31re32rosrys" path="res://assets/enemies/boss1/boss_hurt-Sheet.png" id="7_hyudx"]
+[ext_resource type="Texture2D" uid="uid://1eivlq5g48kw" path="res://assets/enemies/boss1/boss_special_attack-Sheet.png" id="11_2v10m"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_557nu"]
 atlas = ExtResource("2_len00")
@@ -240,6 +242,38 @@ region = Rect2(96, 96, 96, 96)
 [sub_resource type="AtlasTexture" id="AtlasTexture_mtokg"]
 atlas = ExtResource("1_ja24s")
 region = Rect2(192, 96, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lof2h"]
+atlas = ExtResource("11_2v10m")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gcwxy"]
+atlas = ExtResource("11_2v10m")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wq1oj"]
+atlas = ExtResource("11_2v10m")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bvks4"]
+atlas = ExtResource("11_2v10m")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nbwds"]
+atlas = ExtResource("11_2v10m")
+region = Rect2(384, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2pa4b"]
+atlas = ExtResource("11_2v10m")
+region = Rect2(480, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_awc7o"]
+atlas = ExtResource("11_2v10m")
+region = Rect2(576, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b1pim"]
+atlas = ExtResource("11_2v10m")
+region = Rect2(672, 0, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c7qhl"]
 atlas = ExtResource("1_ja24s")
@@ -547,6 +581,35 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_lof2h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gcwxy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wq1oj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bvks4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nbwds")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2pa4b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_awc7o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b1pim")
+}],
+"loop": true,
+"name": &"spikes",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_c7qhl")
 }, {
 "duration": 1.0,
@@ -648,15 +711,15 @@ height = 56.0
 
 [node name="Boss1GodsMessanger" type="CharacterBody2D" unique_id=1499659647]
 script = ExtResource("1_ovx14")
+spike_scene = ExtResource("2_ytm5n")
 attack_hitbox_size = Vector2(100, 50)
 blood_scene = ExtResource("2_835tf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=362006481]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_len00")
-animation = &"death"
-frame = 9
-frame_progress = 1.0
+animation = &"spikes"
+frame_progress = 0.41657734
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1757907199]
 shape = SubResource("CapsuleShape2D_ja24s")

@@ -1,7 +1,7 @@
 ## Slime - extends EnemyBase
 ## Attach this script to your Slime CharacterBody2D
  
-extends EnemyBase
+extends EnemyBase2
  
 func _enemy_ready() -> void:
 	speed = 75.0

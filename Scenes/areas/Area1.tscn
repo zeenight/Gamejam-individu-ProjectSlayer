@@ -158,7 +158,7 @@ position = Vector2(73, 105)
 texture = ExtResource("3_g0k8t")
 
 [node name="SlimeIce" parent="." unique_id=1638831255 instance=ExtResource("4_m4es7")]
-position = Vector2(80, -316)
+position = Vector2(71, -557)
 
 [node name="StaminaUI" type="CanvasLayer" parent="." unique_id=1064018039]
 script = ExtResource("5_2an7f")
@@ -210,8 +210,8 @@ target_scene = ExtResource("13_4pfmd")
 target_spawn_id = "from_area1"
 
 [node name="SpawnPoint" parent="." unique_id=943087050 instance=ExtResource("14_f288s")]
-position = Vector2(637, -337)
-spawn_id = "from_area2"
+position = Vector2(611, -340)
+spawn_id = "ar1"
 
 [node name="RageUI" type="CanvasLayer" parent="." unique_id=262324372]
 script = ExtResource("15_1gsnl")

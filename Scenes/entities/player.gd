@@ -6,8 +6,11 @@ var last_horizontal_direction = 1.0  # 1 for right, -1 for left
 
 # FIREBALL
 @export var fireball_scene: PackedScene
-@export var fireball_cooldown_duration := 3.0
+@export var fireball_cooldown_duration := 10.0
+@export var fireball_stanreduct_duration := 3.0
+
 var fireball_cooldown := 0.0
+var fireball_stanreduct := 0.0
 
 # RAGE SYSTEM
 @export var max_rage := 100.0
@@ -17,7 +20,7 @@ var fireball_cooldown := 0.0
 @export var rage_speed_bonus := 0.10       # 10% speed increase
 @export var rage_damage_multiplier := 2.0  # Double damage
 # RAGE HP REGEN
-@export var rage_heal_interval := 3.0
+@export var rage_heal_interval := 5.0
 var rage_heal_timer := 0.0
 var rage := 0.0
 var is_enraged := false
@@ -32,7 +35,7 @@ var current_hp := 5
 var is_invincible := false
 var invincible_timer := 0.0
 @export var invincible_duration := 1.0           # After taking damage
-@export var attack_invincible_duration := 0.6   # After landing an attack
+@export var attack_invincible_duration := 0.3   # After landing an attack
 
 signal hp_changed(new_hp)
 signal player_died
@@ -100,7 +103,8 @@ func _physics_process(delta: float) -> void:
 	
 	if fireball_cooldown > 0:
 		fireball_cooldown -= delta
-		
+	if fireball_stanreduct > 0:
+		fireball_stanreduct -= delta
 	# Invincibility frames
 	if is_invincible:
 		invincible_timer -= delta
@@ -139,7 +143,7 @@ func _physics_process(delta: float) -> void:
 	# STAMINA REGENERATION - only when not dashing
 	if not is_dashing:
 		var regen_rate = stamina_regen_rate
-		if fireball_cooldown > 0:
+		if fireball_stanreduct > 0:
 			regen_rate = stamina_regen_rate * 0.1  # 20% slower during fireball cooldown
 		stamina = move_toward(stamina, max_stamina, regen_rate * delta)
 	
@@ -469,10 +473,10 @@ func cast_fireball() -> void:
 		return
 	
 	# Consume stamina
-	stamina -= 1
+	stamina -= 10
 	
 	fireball_cooldown = fireball_cooldown_duration
-	
+	fireball_stanreduct = fireball_stanreduct_duration 
 	var fireball = fireball_scene.instantiate()
 	get_parent().add_child(fireball)
 	

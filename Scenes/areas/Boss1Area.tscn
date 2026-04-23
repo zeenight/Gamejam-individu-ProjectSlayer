@@ -80,3 +80,8 @@ offset_bottom = 12.391999
 [node name="SpawnPoint" parent="RageUI" unique_id=943087050 instance=ExtResource("9_ux7wq")]
 position = Vector2(-18, -199)
 spawn_id = "from_area2"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1343728382]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1028881978]
+polygon = PackedVector2Array(-86, -192, -78, -880, -321, -882, -322, -937, -360, -939, -349, -1354, -336, -1354, -331, -1492, -234, -1489, -237, -1479, -210, -1482, -209, -1502, 292, -1495, 294, -1525, 382, -1522, 386, -1439, 349, -1437, 350, -1013, 383, -969, 387, -866, 201, -857, 203, -886, 22, -886, 19, -189, 749, -203, 612, -1470, 491, -1638, -499, -1647, -733, -795, -588, -70, 29, -189)

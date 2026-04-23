@@ -63,6 +63,7 @@ func _physics_process(delta: float) -> void:
 				global_position += direction * travel_speed * delta
 		
 		State.EXPLODE:
+			
 			pass  # Wait for explode animation to finish
 
 func start_travel() -> void:
@@ -72,6 +73,7 @@ func start_travel() -> void:
 	animated_sprite.play("travel")
 
 func explode() -> void:
+	AudioManager.play("fireball")
 	if is_exploding:
 		return
 	
@@ -136,7 +138,6 @@ func _on_body_entered(body: Node2D) -> void:
 
 func _on_area_entered(area: Area2D) -> void:
 	if is_exploding:
-		AudioManager.play("fireball")
 		return
 	
 	# Hit an enemy area - apply damage but keep traveling

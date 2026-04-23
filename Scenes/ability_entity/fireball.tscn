@@ -1,66 +1,66 @@
 [gd_scene format=3 uid="uid://byefedtmt47im"]
 
-[ext_resource type="Texture2D" uid="uid://dx55ysavf086g" path="res://assets/fire-Sheet.png" id="1_7tste"]
-[ext_resource type="Script" uid="uid://breln0fp05n01" path="res://Scenes/entities/fireball.gd" id="1_eguys"]
+[ext_resource type="Script" uid="uid://breln0fp05n01" path="res://Scenes/ability_entity/fireball.gd" id="1_llrek"]
+[ext_resource type="Texture2D" uid="uid://dx55ysavf086g" path="res://assets/fire-Sheet.png" id="2_1yhpx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eguys"]
-atlas = ExtResource("1_7tste")
+atlas = ExtResource("2_1yhpx")
 region = Rect2(0, 192, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_quqao"]
-atlas = ExtResource("1_7tste")
+atlas = ExtResource("2_1yhpx")
 region = Rect2(96, 192, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rqv51"]
-atlas = ExtResource("1_7tste")
+atlas = ExtResource("2_1yhpx")
 region = Rect2(192, 192, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jtmix"]
-atlas = ExtResource("1_7tste")
+atlas = ExtResource("2_1yhpx")
 region = Rect2(288, 192, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x2crd"]
-atlas = ExtResource("1_7tste")
+atlas = ExtResource("2_1yhpx")
 region = Rect2(384, 192, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uebrh"]
-atlas = ExtResource("1_7tste")
+atlas = ExtResource("2_1yhpx")
 region = Rect2(0, 0, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x3tsl"]
-atlas = ExtResource("1_7tste")
+atlas = ExtResource("2_1yhpx")
 region = Rect2(96, 0, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ttxcf"]
-atlas = ExtResource("1_7tste")
+atlas = ExtResource("2_1yhpx")
 region = Rect2(192, 0, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ykt26"]
-atlas = ExtResource("1_7tste")
+atlas = ExtResource("2_1yhpx")
 region = Rect2(288, 0, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_krqiu"]
-atlas = ExtResource("1_7tste")
+atlas = ExtResource("2_1yhpx")
 region = Rect2(384, 0, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_guakq"]
-atlas = ExtResource("1_7tste")
+atlas = ExtResource("2_1yhpx")
 region = Rect2(0, 96, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b60jb"]
-atlas = ExtResource("1_7tste")
+atlas = ExtResource("2_1yhpx")
 region = Rect2(96, 96, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_usjvi"]
-atlas = ExtResource("1_7tste")
+atlas = ExtResource("2_1yhpx")
 region = Rect2(192, 96, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qc355"]
-atlas = ExtResource("1_7tste")
+atlas = ExtResource("2_1yhpx")
 region = Rect2(288, 96, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gggar"]
-atlas = ExtResource("1_7tste")
+atlas = ExtResource("2_1yhpx")
 region = Rect2(384, 96, 96, 96)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ujgje"]
@@ -130,7 +130,7 @@ animations = [{
 
 [node name="Fireball" type="Area2D" unique_id=93344937]
 z_index = 2
-script = ExtResource("1_eguys")
+script = ExtResource("1_llrek")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1933123431]
 texture_filter = 1

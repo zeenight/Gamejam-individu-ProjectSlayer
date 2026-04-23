@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cv8pjlng1hsyy" path="res://Scenes/entities/player.gd" id="1_kyqiw"]
 [ext_resource type="Texture2D" uid="uid://dnlakvnmps6hx" path="res://assets/sprites/MigitsuSpriteSheet_ver3.png" id="2_gntrk"]
-[ext_resource type="PackedScene" uid="uid://byefedtmt47im" path="res://Scenes/entities/fireball.tscn" id="2_jp1p5"]
+[ext_resource type="PackedScene" uid="uid://byefedtmt47im" path="res://Scenes/ability_entity/fireball.tscn" id="2_jp1p5"]
 [ext_resource type="Texture2D" uid="uid://dsl4s6f0tyj7f" path="res://assets/sprites/migitsu_dash.png" id="2_p3bqa"]
 [ext_resource type="Script" uid="uid://bbp6yju1hwrgs" path="res://Scenes/camera_2d.gd" id="3_gntrk"]
 [ext_resource type="Texture2D" uid="uid://soxwxpuojy2g" path="res://assets/shadow.png" id="5_jixa6"]

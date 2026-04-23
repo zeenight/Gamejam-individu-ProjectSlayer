@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://2j4t3kx75upw" path="res://Scenes/entities/skeleton.gd" id="1_3l2ta"]
 [ext_resource type="Texture2D" uid="uid://obrjuq675xkr" path="res://assets/enemies/Skeleton_7_attk-Sheet.png" id="2_8rwdy"]
+[ext_resource type="PackedScene" uid="uid://cwfc56y3c1215" path="res://Scenes/blood_particle.tscn" id="2_akyqk"]
 [ext_resource type="Texture2D" uid="uid://efeeho65bi64" path="res://assets/enemies/Skeleton_7-Sheet-NoOutline.png" id="3_akyqk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xd1ab"]
@@ -450,6 +451,7 @@ height = 56.0
 
 [node name="Skeleton" type="CharacterBody2D" unique_id=618392515]
 script = ExtResource("1_3l2ta")
+blood_scene = ExtResource("2_akyqk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1623645028]
 z_index = 1

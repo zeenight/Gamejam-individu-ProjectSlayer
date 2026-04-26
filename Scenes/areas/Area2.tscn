@@ -1,7 +1,6 @@
 [gd_scene format=4 uid="uid://cvdo3pk5ygol4"]
 
 [ext_resource type="Texture2D" uid="uid://cmjlxnj2i8ceh" path="res://assets/world1/area2new.png" id="2_ai78f"]
-[ext_resource type="PackedScene" uid="uid://bpf10aswti4e5" path="res://Scenes/areas/Boss1Area.tscn" id="2_f783a"]
 [ext_resource type="PackedScene" uid="uid://doomawdhecgns" path="res://Scenes/entities/Player.tscn" id="2_ys5ot"]
 [ext_resource type="Texture2D" uid="uid://calsqkdtsif0f" path="res://assets/world1/lights.png" id="3_kjtj6"]
 [ext_resource type="Script" uid="uid://bxfjtpsokrjof" path="res://Scenes/areas/lights.gd" id="4_4dwh2"]
@@ -13,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://32nlw0kts5a5" path="res://Scenes/entities/skeleton.tscn" id="10_270pi"]
 [ext_resource type="Script" uid="uid://bi4q0h4hfsgkv" path="res://Scenes/areas/rage_ui.gd" id="11_l66pq"]
 [ext_resource type="PackedScene" uid="uid://bebeysi1s2pa3" path="res://Scenes/Door.tscn" id="12_bcjef"]
-[ext_resource type="PackedScene" uid="uid://ce1e5g440qk18" path="res://Scenes/areas/Area1.tscn" id="14_ek041"]
+[ext_resource type="PackedScene" uid="uid://bpf10aswti4e5" path="res://Scenes/areas/Boss1Area.tscn" id="14_ek041"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_270pi"]
 blend_mode = 1
@@ -131,7 +130,7 @@ sources/3 = SubResource("TileSetAtlasSource_l66pq")
 
 [node name="DoortoBoss" parent="." unique_id=1937288202 instance=ExtResource("12_bcjef")]
 position = Vector2(581, -92)
-target_scene = ExtResource("2_f783a")
+target_scene = ExtResource("14_ek041")
 target_spawn_id = "from_area2"
 
 [node name="Player" parent="." unique_id=444266082 instance=ExtResource("2_ys5ot")]
@@ -264,8 +263,3 @@ offset_left = 19.68
 offset_top = -14.608001
 offset_right = 99.68
 offset_bottom = 12.391999
-
-[node name="DoortoArea1" parent="." unique_id=355319289 instance=ExtResource("12_bcjef")]
-position = Vector2(-999, -564)
-target_scene = ExtResource("14_ek041")
-target_spawn_id = "ar1"

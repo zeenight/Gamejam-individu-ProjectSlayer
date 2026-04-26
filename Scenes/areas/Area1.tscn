@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://ij4akp8ukpy5" path="res://assets/world1/tree1.png" id="10_m4es7"]
 [ext_resource type="Texture2D" uid="uid://cfrm0hmb25mmk" path="res://assets/world1/tree2.png" id="11_2an7f"]
 [ext_resource type="PackedScene" uid="uid://bebeysi1s2pa3" path="res://Scenes/Door.tscn" id="12_q0w8w"]
-[ext_resource type="PackedScene" uid="uid://bpf10aswti4e5" path="res://Scenes/areas/Boss1Area.tscn" id="13_4pfmd"]
+[ext_resource type="PackedScene" uid="uid://cvdo3pk5ygol4" path="res://Scenes/areas/Area2.tscn" id="13_4pfmd"]
 [ext_resource type="PackedScene" uid="uid://dki0uu1np7gab" path="res://Scenes/SpawnPoint.tscn" id="14_f288s"]
 [ext_resource type="Script" uid="uid://bi4q0h4hfsgkv" path="res://Scenes/areas/rage_ui.gd" id="15_1gsnl"]
 

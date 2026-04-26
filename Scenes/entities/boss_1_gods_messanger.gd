@@ -75,6 +75,32 @@ func _process_special_attack(delta: float) -> void:
 		spawn_spike_batch()
 		spike_spawn_timer = spike_spawn_interval
 
+func die() -> void:
+	current_state = State.DEAD
+	velocity = Vector2.ZERO
+	emit_signal("died")
+
+	set_collision_layer(0)
+	set_collision_mask(0)
+
+	var area = get_node_or_null("Area2D")
+	if area:
+		area.monitoring = false
+
+	disable_attack_hitbox()
+
+	if health_bar_bg:
+		health_bar_bg.visible = false
+	if health_bar_fill:
+		health_bar_fill.visible = false
+
+	animated_sprite.play("death")
+	current_animation = "death"
+
+	await animated_sprite.animation_finished
+	await get_tree().create_timer(3.0).timeout
+	get_tree().change_scene_to_file("res://Scenes/win_screen.tscn")
+
 func spawn_spike_batch() -> void:
 	if not spike_scene:
 		return
